@@ -25,9 +25,9 @@
     "debug": "^2.2.0"
   },
   "devDependencies": {
-    "@retailmenot/core-ui-eslintrc": "^4.0.1",
+    "@retailmenot/core-ui-eslintrc": "^5.0.0",
     "@retailmenot/grunt-hooks": "^1.0.0",
-    "eslint": "^3.8.0",
+    "eslint": "^3.11.0",
     "grunt": "^1.0.1",
     "gruntify-eslint": "^3.1.0",
     "mock-fs": "^3.11.0",
