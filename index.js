@@ -36,32 +36,32 @@ function getResolveComponent(config) {
 			entry,
 			config
 		)
-		.then(function (resolvedPath) {
-			debug('resolved path: ' + resolvedPath);
-			if (!resolvedPath) {
+			.then(function (resolvedPath) {
+				debug('resolved path: ' + resolvedPath);
+				if (!resolvedPath) {
 				// No ingredient found
-				return callback();
-			}
+					return callback();
+				}
 
-			// A matching entrypoint was found
-			return callback(null, {
-				path: resolvedPath
-			});
-		})
-		.catch(function (e) {
+				// A matching entrypoint was found
+				return callback(null, {
+					path: resolvedPath
+				});
+			})
+			.catch(function (e) {
 			// Allow for PantryDoesNotExistError or IngredientDoesNotExistError
 			// because there's a chance the file being required has a pantry-like
 			// path, but does not live in a pantry. In these cases, we want to
 			// fall back to webpack's normal file resolution.
-			if (
-				e instanceof roux.errors.PantryDoesNotExistError ||
-				e instanceof roux.errors.IngredientDoesNotExistError
-			) {
-				return callback();
-			}
-			debug('an error occured trying to resolve ' + request.request, e);
-			return callback(e);
-		});
+				if (
+					e instanceof roux.errors.PantryDoesNotExistError ||
+					e instanceof roux.errors.IngredientDoesNotExistError
+				) {
+					return callback();
+				}
+				debug('an error occured trying to resolve ' + request.request, e);
+				return callback(e);
+			});
 	};
 }
 
