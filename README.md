@@ -3,6 +3,8 @@
 Webpack resolver plugin for resolving entrypoints within a
 roux pantry.
 
+[![Build Status](https://travis-ci.org/RetailMeNotSandbox/roux-resolver-webpack-plugin.svg?branch=master)](https://travis-ci.org/RetailMeNotSandbox/roux-resolver-webpack-plugin)
+
 ## Installation
 
 ```sh
