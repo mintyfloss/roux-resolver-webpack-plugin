@@ -27,7 +27,7 @@
   "devDependencies": {
     "@retailmenot/core-ui-eslintrc": "^6.0.0",
     "@retailmenot/grunt-hooks": "^1.0.0",
-    "debug": "^3.1.0",
+    "debug": "^4.1.0",
     "eslint": "^4.19.1",
     "grunt": "^1.0.2",
     "gruntify-eslint": "^4.0.0",
